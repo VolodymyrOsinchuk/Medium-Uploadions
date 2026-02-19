@@ -8,6 +8,7 @@ const create = asyncHandler(async (req, res) => {
   const { name, description, price } = req.body;
 
   const uploader = async (path) => await cloudinary.uploads(path, "uploads");
+  console.log("🚀 ~ uploader ~ uploader :", uploader);
 
   try {
     if (req.method === "POST") {
@@ -31,6 +32,7 @@ const create = asyncHandler(async (req, res) => {
         price: price,
         files: urls,
       });
+      console.log("🚀 ~ product:", product);
 
       return res.status(201).json({
         success: true,
@@ -117,7 +119,7 @@ const update = asyncHandler(async (req, res) => {
               },
             },
             {},
-            { new: true }
+            { new: true },
           );
           return res.status(200).json({
             success: true,

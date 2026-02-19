@@ -2,7 +2,7 @@ https://medium.com/@it.ermias.asmare/uploading-multiple-images-on-cloudinary-usi
 
 echo "# Medium-Uploadions" >> README.md
 git init
-git add README.md
+git add .
 git commit -m "first commit"
 git branch -M main
 git remote add origin git@github.com:VolodymyrOsinchuk/Medium-Uploadions.git
